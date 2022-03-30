@@ -9,9 +9,9 @@ import lombok.Setter;
 
 @Getter
 @Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 @Builder
 public class RequestDna {
 	

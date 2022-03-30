@@ -1,5 +1,7 @@
 package com.xmen.delegate;
 
+import org.springframework.http.HttpStatus;
+
 import com.xmen.dto.MutantStats;
 
 public interface IMutantDelegate {
@@ -7,7 +9,7 @@ public interface IMutantDelegate {
 	/**
 	 * Method to validate DNA mutant
 	 * @param adn
-	 * @return boolean
+	 * @return {@link HttpStatus}
 	 * @author  Anghye Plata
 	 */
 	boolean isMutant(String[] adn);

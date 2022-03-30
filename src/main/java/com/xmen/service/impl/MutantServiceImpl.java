@@ -29,8 +29,11 @@ public class MutantServiceImpl implements IMutantService{
             Pattern pat = Pattern.compile("([ATCG])\\1{3,}");
             Matcher mat = pat.matcher(cadena);
             count = mat.find() ? ++count : count;
+            if(count>2) {
+            	return true;
+            }
         }
-        return count > 2;
+        return false;
 	}
 	
 	@Override
