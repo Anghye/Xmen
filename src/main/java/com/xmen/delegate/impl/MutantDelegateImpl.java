@@ -18,8 +18,8 @@ public class MutantDelegateImpl implements IMutantDelegate{
 	@Override
 	public boolean isMutant(String[] adn) {
 		boolean isMutant = mutanteService.isMutant(adn);
+		mutanteService.saveDna(adn, isMutant);
 		if (isMutant) {
-			mutanteService.saveDna(adn, isMutant);
 			return isMutant;
 		}
 		throw new XmenException(HttpStatus.FORBIDDEN);
